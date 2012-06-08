@@ -1,0 +1,77 @@
+@media screen {
+	[id$="tabbox"],
+	[id$="tabpanels"] {
+		clear:left;
+		overflow:hidden;
+	}
+	ul[role="tablist"] {
+		overflow:hidden;
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	ul[role="tablist"]:before {
+		content:'';
+		display:block;
+		float:left;
+		margin:0;
+		padding:0;
+		width:10px;
+		height:40px;
+		background:url(../images/tab-fadein.png) scroll no-repeat;
+	}
+	ul[role="tablist"]:after {
+		content:'';
+		display:block;
+		float:left;
+		margin:0;
+		padding:0;
+		width:10px;
+		height:40px;
+		background:url(../images/tab-fadeout.png) scroll no-repeat;
+	}
+	ul[role="tablist"] > li {
+		float:left;
+		margin:0;
+		padding:0;
+	        height:40px;
+	}
+	ul[role="tablist"] a {
+		outline:0;
+		float:left;
+		height:40px;
+		margin:0;
+		background:url(../images/tab-inactive-center.png) scroll repeat-x;
+		line-height:40px;
+		vertical-align:top;
+		text-decoration:none;
+		color:#222;
+	}
+	ul[role="tablist"] a:before {
+		content:'';
+		float:left;
+		width:10px;
+		height:40px;
+		margin:0;
+		padding:0;
+		background:url(../images/tab-inactive-left.png) scroll no-repeat;
+	}
+	ul[role="tablist"] a:after {
+		content:'';
+		float:right;
+		width:10px;
+		height:40px;
+		margin:0;
+		padding:0;
+		background:url(../images/tab-inactive-right.png) scroll no-repeat;
+	}
+	ul[role="tablist"] a[aria-selected="true"] {
+		background:url(../images/tab-active-center.png) scroll repeat-x;
+	}
+	ul[role="tablist"] a[aria-selected="true"]:before {
+		background:url(../images/tab-active-left.png) scroll no-repeat;
+	}
+	ul[role="tablist"] a[aria-selected="true"]:after {
+		background:url(../images/tab-active-right.png) scroll no-repeat;
+	}
+}

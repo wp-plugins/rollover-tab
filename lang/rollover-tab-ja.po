@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-08 08:49+0900\n"
+"PO-Revision-Date: 2012-06-08 08:49+0900\n"
+"Last-Translator: Eiji 'Sabaoh' Yamada <age.yamada@kxa.biglobe.ne.jp>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: /Users/age/Documents/github/wordpress/plugins/rollover-tab\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: /Users/age/Documents/github/wordpress/plugins/rollover-tab\n"
+
+#: /Users/age/Documents/github/wordpress/plugins/rollover-tab/rollover-tab.php:144
+msgid "Index - Please try other (not IE) browser, or IE 8 or above."
+msgstr "インデックス - タブ表示でご覧になるには、IE以外のブラウザか、IE8以上でご覧ください。"
+
