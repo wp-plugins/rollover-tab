@@ -2,7 +2,7 @@
 Tags: タブ, ショートコード, グラフィカル, スタイルシート, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -12,6 +12,26 @@ License: GPLv2
 == 解説 ==
 
 このプラグインは、投稿や固定ページにグラフィカルなタブ付きパネルを作るための2つのショートコードを定義します。テーマのスタイルシートやテンプレートに手を加える必要はありません。正しく表示するにはIE以外のブラウザ（Chrome, FireFox, Opera, Safariでテスト済みです)か、IE8以上が必要です。IE7以下では普通の&lt;ul&gt;リストが表示され、別なブラウザを使うかIEを8以上にアップデートすることを推奨するメッセージが表示されます。
+
+= 使い方: =
+
+<pre>
+[rollover-tabs name="id" norollover="true"][rollover-tab name="tab1" label="サンプル１"]
+content of tab1...
+...
+[/rollover-tab][rollover-tab name="tab2" label="サンプル２"]
+content of tab2...
+...
+[/rollover-tab][/rollover-tabs]
+</pre>
+
+= 属性: =
+
+name: 内部で使われる名前(id)です。[rollover-tabs name="id"]は省略可能(省略した時の値は"rollover")です。[rollover-tab name="tab1"]は省略できません。
+
+norollover: 省略可能です。省略するとタブはマウスを重ねるだけで切り替わります。"true"を指定すると、タブはクリックしないと切り替わらないようになります。
+
+label: タブに表示されるキャプションです。省略できません。
 
 注意: リッチテキストエディタで投稿やページを編集する際に、隣接する2つのショートコードの間に改行を入れないでください。例えば[rollover-tabs]と[rollover-tab]の間や、[/rollover-tab]と次の[rollover-tab]の間などにです。改行を入れるとワードプレスが勝手に&lt;p&gt;タグをつけてしまうので、表示が崩れます。
 
@@ -87,12 +107,19 @@ Sample
 </pre>
 
 
+== Screenshots ==
+
+1. 配布された状態では、rollover tabは白い背景のテーマに合うように作られています。
+
+
 == 詳しくは ==
 
 http://sabaoh.sakura.ne.jp/wordpress/を御覧ください。
 
 
 == 変更履歴 ==
+= 1.0.2 =
+スタイルシートを改善しました。
 = 1.0.1 =
 クリックして切り替えにする機能のバグフィックス
 = 1.0.0 =

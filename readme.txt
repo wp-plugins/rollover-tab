@@ -2,7 +2,7 @@
 Tags: tab, shortcode, graphical, style, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -13,8 +13,27 @@ This is shortcode plugin which make graphical tab panels available.
 
 This plugin define two shortcodes to generate graphical tab panels in posts and pages. You don't have to edit your theme's style.css, and any templates. To browse it's tab panels, NOT IE browser (Chrome, FireFox, Opera, Safari were tested) or IE8 or above required. With IE7 or below, it will generate standard &lt;ul&gt; list and recommend to use other browser or update.
 
-NOTICE: with rich text editor, you must NOT insert any line breaks between [rollover-tabs] and next [rollover-tab], between [/rollover-tab] and next [rollover-tab], between [/rollover-tab] and [/rollover-tabs]. Due to wordpress automatic &lt;p&gt; insertion.
+= Usage: =
 
+<pre>
+[rollover-tabs name="id" norollover="true"][rollover-tab name="tab1" label="sample1"]
+content of tab1...
+...
+[/rollover-tab][rollover-tab name="tab2" label="sample2"]
+content of tab2...
+...
+[/rollover-tab][/rollover-tabs]
+</pre>
+
+= Attribute: =
+
+name: internal name (id). [rollover-tabs name="id"] is optional (default value is "rollover"). [rollover-tab name="tab1"] is required.
+
+norollover: optional boolean. As default tab panels will switch when your mouse is on the tab (click is not necessary). If norollover is set "true", panels will switch when you click the tab.
+
+label: caption of tabs, required.
+
+NOTICE: with rich text editor, you must NOT insert any line breaks between [rollover-tabs] and next [rollover-tab], between [/rollover-tab] and next [rollover-tab], between [/rollover-tab] and [/rollover-tabs]. Due to wordpress automatic &lt;p&gt; insertion.
 
 = Features: =
 
@@ -87,13 +106,20 @@ Sample
 </pre>
 
 
+== Screenshots ==
+
+1. As published, rollover tab will match white-background themes.
+
+
 == For more information ==
 
 Please visit http://sabaoh.sakura.ne.jp/wordpress/ . In Japanese only.
-If you need information in English, please contact to mailto:age.yamada@kxa.biglobe.ne.jp .
+If you need information in English, please contact to age.yamada@kxa.biglobe.ne.jp .
 
 
 == Changelog ==
+= 1.0.2 =
+stylesheet improved.
 = 1.0.1 =
 click-needed-swithing bug fix.
 = 1.0.0 =

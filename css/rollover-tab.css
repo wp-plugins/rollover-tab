@@ -4,6 +4,12 @@
 		clear:left;
 		overflow:hidden;
 	}
+	[id$="tabpanels"] {
+		margin: -5mm 5mm 0;
+	}
+	[id$="tabpanels"] :first-child {
+		margin-top: 0;
+	}
 	ul[role="tablist"] {
 		overflow:hidden;
 		margin:0;

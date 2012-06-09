@@ -3,7 +3,7 @@
 Plugin Name: Rollover-Tab
 Plugin URI:  http://sabaoh.sakura.ne.jp/wordpress/
 Description: With this plugin, you can use [rollover-tabs name="rollover"][rollover-tab name="tab1" label="example"]...[rollover-tab ...]...[/rollover-tabs] shortcode. This may display in graphical tabs it's switched only mouse over. Not IE browser (chrome, firefox, opera, and safari was tested), IE 8 or above is required. And when browser is IE 5, IE 6 or IE 7, update recommendation will appear.
-Version:     1.0.1
+Version:     1.0.2
 Author:      Eiji 'Sabaoh' Yamada
 Author URI:  http://sabaoh.sakura.ne.jp/wordpress/
 License:     GPLv2
