@@ -11,7 +11,9 @@ This is shortcode plugin which make graphical tab panels available.
 
 == Description ==
 
-This plugin define two shortcodes to generate graphical tab panels in posts and pages. You don't have to edit your theme's style.css, and any templates. To browse it's tab panels, NOT IE browser (Chrome, FireFox, Opera, Safari were tested) or IE8 or above required. With IE7 or below, it will generate standard &lt;ul&gt; list and recommend to use other browser or update.
+This plugin define two shortcodes to generate graphical tab panels in posts and pages. You don't have to edit your theme's style.css, and any templates. 
+
+To browse it's tab panels, NOT IE browser (Chrome, FireFox, Opera, Safari were tested) or IE8 or above required. With IE7 or below, it will generate standard &lt;ul&gt; list and recommend to use other browser or update.
 
 Please visit my sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=106
 
@@ -109,7 +111,7 @@ Sample
 
 
 == Screenshots ==
-1. As published, rollover tab will match white-background themes.
+1. screenshot-1.png
 
 
 == For more information ==
