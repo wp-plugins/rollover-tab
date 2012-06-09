@@ -5,14 +5,14 @@
 		overflow:hidden;
 	}
 	[id$="tabpanels"] {
-		margin: -5mm 5mm 0;
+		padding: 0 5mm;
 	}
 	[id$="tabpanels"] :first-child {
 		margin-top: 0;
 	}
 	ul[role="tablist"] {
 		overflow:hidden;
-		margin:0;
+		margin:0 0 0 1px;
 		padding:0;
 		list-style:none;
 	}
@@ -24,7 +24,7 @@
 		padding:0;
 		width:10px;
 		height:40px;
-		background:url(../images/tab-fadein.png) scroll no-repeat;
+		background:url(../images/tab-left.png) scroll no-repeat;
 	}
 	ul[role="tablist"]:after {
 		content:'';
@@ -34,7 +34,7 @@
 		padding:0;
 		width:10px;
 		height:40px;
-		background:url(../images/tab-fadeout.png) scroll no-repeat;
+		background:url(../images/tab-right.png) scroll no-repeat;
 	}
 	ul[role="tablist"] > li {
 		float:left;

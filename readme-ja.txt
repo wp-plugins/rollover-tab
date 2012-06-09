@@ -2,7 +2,7 @@
 Tags: タブ, ショートコード, グラフィカル, スタイルシート, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -16,7 +16,7 @@ License: GPLv2
 = 使い方: =
 
 <pre>
-[rollover-tabs name="id" norollover="true"][rollover-tab name="tab1" label="サンプル１"]
+[rollover-tabs name="id" norollover="true" border="true" margin="-26px" height="1.5in"][rollover-tab name="tab1" label="サンプル１"]
 content of tab1...
 ...
 [/rollover-tab][rollover-tab name="tab2" label="サンプル２"]
@@ -31,6 +31,12 @@ name: 内部で使われる名前(id)です。[rollover-tabs name="id"]は省略
 
 norollover: 省略可能です。省略するとタブはマウスを重ねるだけで切り替わります。"true"を指定すると、タブはクリックしないと切り替わらないようになります。
 
+border: 省略可能です。省略するとボーダーは表示されません。"true" を指定するとボーダーが表示されるようになります。
+
+margin: 省略可能です。上ボーダーがグラフィックと一致しなかった場合に、この属性で位置を調整できます。省略した時の値は"-26px"です。
+
+height: 省略可能です。省略するとパネルの高さは内容によって自動的に調整されます。パネルの高さを固定したい時に、この属性で高さを指定できます。
+
 label: タブに表示されるキャプションです。省略できません。
 
 注意: リッチテキストエディタで投稿やページを編集する際に、隣接する2つのショートコードの間に改行を入れないでください。例えば[rollover-tabs]と[rollover-tab]の間や、[/rollover-tab]と次の[rollover-tab]の間などにです。改行を入れるとワードプレスが勝手に&lt;p&gt;タグをつけてしまうので、表示が崩れます。
@@ -42,6 +48,9 @@ label: タブに表示されるキャプションです。省略できません�
 * [rollover-tabs]と[/rollober-tabs]の間に、[rollover-tab name="..." label="..."]...[/rollover-tab]を使ってひとつひとつのタブ（パネル）を作ります。
 * リッチなグラフィックでタブを表示します。
 * デフォルトではタブにマウスを重ねるだけでタブが切り替わります。オプションでクリックしないと切り替わらないようにもできます。
+* ボーダーの表示をオン・オフできるようになりました。
+* ボーダーの高さをグラフィックに合わせて調節できるようになりました。
+* パネルの高さを指定できるようになりました。
 
 
 == インストール ==
@@ -118,6 +127,10 @@ http://sabaoh.sakura.ne.jp/wordpress/を御覧ください。
 
 
 == 変更履歴 ==
+= 1.1.0 =
+* ボーダーの表示をオン・オフできるようになりました。
+* ボーダーの高さをグラフィックに合わせて調節できるようになりました。
+* パネルの高さを指定できるようになりました。
 = 1.0.2 =
 スタイルシートを改善しました。
 = 1.0.1 =

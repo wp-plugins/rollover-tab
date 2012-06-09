@@ -2,7 +2,7 @@
 Tags: tab, shortcode, graphical, style, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -20,7 +20,7 @@ Please visit my sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=106
 = Usage: =
 
 <pre>
-[rollover-tabs name="id" norollover="true"][rollover-tab name="tab1" label="sample1"]
+[rollover-tabs name="id" norollover="true" border="true" margin="-26px" height="1.5in"][rollover-tab name="tab1" label="sample1"]
 content of tab1...
 ...
 [/rollover-tab][rollover-tab name="tab2" label="sample2"]
@@ -35,6 +35,12 @@ name: internal name (id). [rollover-tabs name="id"] is optional (default value i
 
 norollover: optional boolean. As default tab panels will switch when your mouse is on the tab (click is not necessary). If norollover is set "true", panels will switch when you click the tab.
 
+border: optional boolean. As default panel has no border. If border is set "true", border will display.
+
+margin: optional. Default value is "-26px". If your panels' top border doesn't match the tab graphic, you can adjust the position of the top border.
+
+height: optional. As default panels' height will adjust automatic. You can assign fixed height to your panels.
+
 label: caption of tabs, required.
 
 NOTICE: with rich text editor, you must NOT insert any line breaks between [rollover-tabs] and next [rollover-tab], between [/rollover-tab] and next [rollover-tab], between [/rollover-tab] and [/rollover-tabs]. Due to wordpress automatic &lt;p&gt; insertion.
@@ -45,7 +51,9 @@ NOTICE: with rich text editor, you must NOT insert any line breaks between [roll
 * In between [rollover-tabs] and [/rollober-tabs], you can define panels with [rollover-tab name="..." label="..."]...[/rollover-tab] shortcode.
 * Tabs with label will display in rich graphical background.
 * As default, tabs will switch when your mouse is on the tab. Optional, you can choose click-needed-switching.
-
+* You can choose the border on or off.
+* You can adjust position of top border without editing stylesheet.
+* You can assign height of panels, without editing stylesheet of course.
 
 == Installation ==
 
@@ -111,7 +119,7 @@ Sample
 
 
 == Screenshots ==
-1. screenshot-1.png
+1. Graphics will match white-background themes.
 
 
 == For more information ==
@@ -121,6 +129,10 @@ If you need information in English, please contact to age.yamada@kxa.biglobe.ne.
 
 
 == Changelog ==
+= 1.1.0 =
+* You can choose the border on or off.
+* You can adjust position of top border.
+* You can assign height of panels.
 = 1.0.2 =
 stylesheet improved.
 = 1.0.1 =
