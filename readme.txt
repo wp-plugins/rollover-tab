@@ -107,7 +107,6 @@ Sample
 
 
 == Screenshots ==
-
 1. As published, rollover tab will match white-background themes.
 
 
