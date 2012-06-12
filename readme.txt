@@ -17,6 +17,10 @@ To browse it's tab panels, NOT IE browser (Chrome, FireFox, Opera, Safari were t
 
 Please visit my sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=106
 
+"right" attribute sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=116
+
+"scroll" attribute sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=122
+
 = Usage: =
 
 <pre>
@@ -32,39 +36,30 @@ content of tab2...
 = Attribute: =
 
 name:
-
 internal name (id). [rollover-tabs name="id"] is optional (default value is "rollover"). [rollover-tab name="tab1"] is required.
 
 norollover:
-
 optional boolean. As default tab panels will switch when your mouse is on the tab (click is not necessary). If norollover is set "true", panels will switch when you click the tab.
 
 border:
-
 optional boolean. As default panel has no border. If border is set "true", border will display.
 
 margin:
-
 optional. As default margin-top was defined in css/rollover-tab.css (Now vlaue has changed to 0 for all themes). If your panels' top border didn't match the tab graphic, you could adjust the position of the top border by either edit css/rollover-tab.css or set margin attribute in each rollover-tabs tag.
 
 height:
-
 optional. As default panels' height will adjust automatic. You can assign fixed height to your panels.
 
 left:
-
 optional. As default left defined in css/rollover-tab.css (Value is "1px"). If you wanted to make space in left of tabs, you could set greater value to this attribute. "0" or "0px" is NOT recommended due to avoid lack of border.
 
 right:
-
 optional. Default value is false. If you wanted to make tabs align right, you could set "1px" or greater value to this attribute. If "left" attribute was setted, this attribute would be ignored. "0" or "0px" is NOT recommended due to avoid lack of border.
 
 scroll:
-
 optional boolean. As default panel has no scroll bar. If scroll attribute was set "true", panel will have scroll bar.
 
 label:
-
 caption of tabs, required.
 
 NOTICE: Since 1.2.0, margin attribute's default value changed from "-26px" to "0". So if you've assigned margin value, You had to change your assignment in order to maintain good display.
