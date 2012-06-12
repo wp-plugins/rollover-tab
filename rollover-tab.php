@@ -3,7 +3,7 @@
 Plugin Name: Rollover-Tab
 Plugin URI:  http://sabaoh.sakura.ne.jp/wordpress/
 Description: With this plugin, you can use [rollover-tabs name="rollover"][rollover-tab name="tab1" label="example"]...[rollover-tab ...]...[/rollover-tabs] shortcode. This may display in graphical tabs it's switched only mouse over. Not IE browser (chrome, firefox, opera, and safari was tested), IE 8 or above is required. And when browser is IE 5, IE 6 or IE 7, update recommendation will appear.
-Version:     1.1.0
+Version:     1.2.0
 Author:      Eiji 'Sabaoh' Yamada
 Author URI:  http://sabaoh.sakura.ne.jp/wordpress/
 License:     GPLv2
@@ -113,7 +113,7 @@ function rollover_tab_shortcode2( $atts, $content = null ) {
 
 HERE;
 
-		$html .= $content;
+		$html .= do_shortcode( $content );
 
 		$html .= <<< HERE
 			</section>
@@ -139,8 +139,11 @@ function rollover_tabs_shortcode( $atts, $content = null ) {
 		'name' => 'rollover',
 		'norollover' => false,
 		'border' => false,
-		'margin' => '-26px',
-		'height' => false
+		'margin' => false,
+		'height' => false,
+		'left'   => false,
+		'right'  => false,
+		'scroll' => false,
 	), $atts ) );
 
 	if ( $name ) {
@@ -151,17 +154,28 @@ function rollover_tabs_shortcode( $atts, $content = null ) {
 		if ( !$norollover )
 			$html .= ' data-options="autofocus"';
 		$html .= ">\n";
+
+		$style = '';
+		if ( $left )
+			$style = ' style="left:' . $left . ';"';
+		elseif ( $right )
+			$style = ' style="left:auto; right:' . $right . ';"';
 		$html .= <<< HERE
+  <![if !IE 8]>
 	<header>
+  <![endif]>
+  <!--[if IE 8]>
+	<header style="height:22px;">
+  <![endif]-->
 		<![if !lte IE 7]>
-			<ul role="tablist" aria-owns="$name-tabpanels">
+			<ul role="tablist" aria-owns="$name-tabpanels"$style>
 		<![endif]>
 		<!--[if lte IE 7]>
 
 HERE;
 		$html .= "\t\t\t<h2>" . __( 'Index - Please try other (not IE) browser, or IE 8 or above.', 'rollover-tab' ) . "</h2>\n";
 		$html .= <<< HERE
-			<ul>
+			<ul aria-owns="$name-tabpanels">
 		<![endif]-->
 
 HERE;
@@ -171,15 +185,23 @@ HERE;
 		$html .= do_shortcode( $content );
 
 		// close header and start panels
-		$style = "margin-top:$margin;";
-		if ( $border )
-			$style .= 'border:solid thin #a0a0a0;';
-		if ( $height )
-			$style .= "height:$height;";
+		$style = '';
+		if ( $margin || $border || $height || $scroll ) {
+			$style = ' style="';
+			if ( $margin )
+				$style .= "margin-top:$margin;";
+			if ( $border )
+				$style .= 'border:solid thin #a0a0a0;';
+			if ( $height )
+				$style .= "height:$height;";
+			if ( $scroll )
+				$style .= 'overflow:scroll;';
+			$style .= '"';
+		}
 		$html .= <<< HERE
 			</ul>
 	</header>
-	<div id="$name-tabpanels" style="$style">
+	<div id="$name-tabpanels"$style>
 
 HERE;
 

@@ -2,7 +2,7 @@
 Tags: tab, shortcode, graphical, style, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -20,7 +20,7 @@ Please visit my sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=106
 = Usage: =
 
 <pre>
-[rollover-tabs name="id" norollover="true" border="true" margin="-26px" height="1.5in"][rollover-tab name="tab1" label="sample1"]
+[rollover-tabs name="id" norollover="true" border="true" margin="-2px" height="1.5in" left="1px" right="1px" scroll="true"][rollover-tab name="tab1" label="sample1"]
 content of tab1...
 ...
 [/rollover-tab][rollover-tab name="tab2" label="sample2"]
@@ -31,17 +31,43 @@ content of tab2...
 
 = Attribute: =
 
-name: internal name (id). [rollover-tabs name="id"] is optional (default value is "rollover"). [rollover-tab name="tab1"] is required.
+name:
 
-norollover: optional boolean. As default tab panels will switch when your mouse is on the tab (click is not necessary). If norollover is set "true", panels will switch when you click the tab.
+internal name (id). [rollover-tabs name="id"] is optional (default value is "rollover"). [rollover-tab name="tab1"] is required.
 
-border: optional boolean. As default panel has no border. If border is set "true", border will display.
+norollover:
 
-margin: optional. Default value is "-26px". If your panels' top border doesn't match the tab graphic, you can adjust the position of the top border.
+optional boolean. As default tab panels will switch when your mouse is on the tab (click is not necessary). If norollover is set "true", panels will switch when you click the tab.
 
-height: optional. As default panels' height will adjust automatic. You can assign fixed height to your panels.
+border:
 
-label: caption of tabs, required.
+optional boolean. As default panel has no border. If border is set "true", border will display.
+
+margin:
+
+optional. As default margin-top was defined in css/rollover-tab.css (Now vlaue has changed to 0 for all themes). If your panels' top border didn't match the tab graphic, you could adjust the position of the top border by either edit css/rollover-tab.css or set margin attribute in each rollover-tabs tag.
+
+height:
+
+optional. As default panels' height will adjust automatic. You can assign fixed height to your panels.
+
+left:
+
+optional. As default left defined in css/rollover-tab.css (Value is "1px"). If you wanted to make space in left of tabs, you could set greater value to this attribute. "0" or "0px" is NOT recommended due to avoid lack of border.
+
+right:
+
+optional. Default value is false. If you wanted to make tabs align right, you could set "1px" or greater value to this attribute. If "left" attribute was setted, this attribute would be ignored. "0" or "0px" is NOT recommended due to avoid lack of border.
+
+scroll:
+
+optional boolean. As default panel has no scroll bar. If scroll attribute was set "true", panel will have scroll bar.
+
+label:
+
+caption of tabs, required.
+
+NOTICE: Since 1.2.0, margin attribute's default value changed from "-26px" to "0". So if you've assigned margin value, You had to change your assignment in order to maintain good display.
 
 NOTICE: with rich text editor, you must NOT insert any line breaks between [rollover-tabs] and next [rollover-tab], between [/rollover-tab] and next [rollover-tab], between [/rollover-tab] and [/rollover-tabs]. Due to wordpress automatic &lt;p&gt; insertion.
 
@@ -54,6 +80,10 @@ NOTICE: with rich text editor, you must NOT insert any line breaks between [roll
 * You can choose the border on or off.
 * You can adjust position of top border without editing stylesheet.
 * You can assign height of panels, without editing stylesheet of course.
+* Stylesheet was improved and top border will match with graphics, theme proof positioning was innovated since 1.2.0.
+* You can use some other shortcodes between [rollover-tab...] and [/rollover-tab], since 1.2.0.
+* You can assign position of tabs left or right, since 1.2.0.
+* You can choose the scroll bar on or off. Since 1.2.0.
 
 == Installation ==
 
@@ -129,6 +159,11 @@ If you need information in English, please contact to age.yamada@kxa.biglobe.ne.
 
 
 == Changelog ==
+= 1.2.0 =
+* Theme proof positioning was innovated. So "margin" attribute's default value changed from "-26px" in php to "0" in css.
+* Nested shortcode will proceed between [rollover-tab ...] and [/rollover-tab].
+* You can assign position of tabs left or right.
+* You can choose the scroll bar on or off.
 = 1.1.0 =
 * You can choose the border on or off.
 * You can adjust position of top border.
