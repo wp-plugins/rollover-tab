@@ -3,7 +3,7 @@
 Plugin Name: Rollover-Tab
 Plugin URI:  http://sabaoh.sakura.ne.jp/wordpress/
 Description: With this plugin, you can use [rollover-tabs name="rollover"][rollover-tab name="tab1" label="example"]...[rollover-tab ...]...[/rollover-tabs] shortcode. This may display in graphical tabs it's switched only mouse over. Not IE browser (chrome, firefox, opera, and safari was tested), IE 8 or above is required. And when browser is IE 5, IE 6 or IE 7, update recommendation will appear.
-Version:     1.2.0
+Version:     1.2.1
 Author:      Eiji 'Sabaoh' Yamada
 Author URI:  http://sabaoh.sakura.ne.jp/wordpress/
 License:     GPLv2
@@ -72,17 +72,24 @@ add_action( 'wp_enqueue_scripts', 'rotab_enqueue_script' );
  */
 function rollover_tab_shortcode1( $atts, $content = null ) {
 	global $rotab_name;
+	global $rotab_font;
 
 	// get parameters
 	extract( shortcode_atts( array(
-		'name' => false,
-		'label' => false
+		'name'  => false,
+		'label' => false,
+		'font'  => false,
 	), $atts ) );
 
 	if ( $name && $label ) {
 		// generate tab
+		$style = '';
+		if ( $font )
+			$style = ' style="font-size:' . $font . ';"';
+		elseif ( $rotab_font )
+			$style = ' style="font-size:' . $rotab_font . ';"';
 		$html = <<< HERE
-				<li><a id="$rotab_name-tab-$name" href="#$rotab_name-tabpanel-$name" role="tab">$label</a></li>
+				<li><a id="$rotab_name-tab-$name" href="#$rotab_name-tabpanel-$name" role="tab"$style>$label</a></li>
 
 HERE;
 		return $html;
@@ -133,6 +140,7 @@ HERE;
  */
 function rollover_tabs_shortcode( $atts, $content = null ) {
 	global $rotab_name;
+	global $rotab_font;
 
 	// get parameters
 	extract( shortcode_atts( array(
@@ -144,10 +152,12 @@ function rollover_tabs_shortcode( $atts, $content = null ) {
 		'left'   => false,
 		'right'  => false,
 		'scroll' => false,
+		'font'   => false,
 	), $atts ) );
 
 	if ( $name ) {
 		$rotab_name = $name;
+		$rotab_font = $font;
 
 		// generate graphical tabs - header
 		$html = '<section id="' . $name . '-tabbox"';
@@ -191,7 +201,7 @@ HERE;
 			if ( $margin )
 				$style .= "margin-top:$margin;";
 			if ( $border )
-				$style .= 'border:solid thin #a0a0a0;';
+				$style .= 'border-style:solid;';
 			if ( $height )
 				$style .= "height:$height;";
 			if ( $scroll )

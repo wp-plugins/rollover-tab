@@ -2,7 +2,7 @@
 Tags: タブ, ショートコード, グラフィカル, スタイルシート, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -16,10 +16,10 @@ License: GPLv2
 = 使い方: =
 
 <pre>
-[rollover-tabs name="id" norollover="true" border="true" margin="-2px" height="1.5in" left="1px" right="1px" scroll="true"][rollover-tab name="tab1" label="サンプル１"]
+[rollover-tabs name="id" norollover="true" border="true" margin="-2px" height="1.5in" left="1px" right="1px" scroll="true" font="small"][rollover-tab name="tab1" label="サンプル１"]
 content of tab1...
 ...
-[/rollover-tab][rollover-tab name="tab2" label="サンプル２"]
+[/rollover-tab][rollover-tab name="tab2" label="サンプル２" font="large"]
 content of tab2...
 ...
 [/rollover-tab][/rollover-tabs]
@@ -43,6 +43,8 @@ right: 省略可能です。省略したときの値はfalseです。タブの�
 
 scroll: 省略可能です。省略するとパネルにはスクロールバーが表示されません。"true" を指定するとスクロールバーが表示されるようになります。
 
+font: 省略可能です。フォントのサイズを指定できます。[rollover-tab ...]ショートコードに指定すると、そのタブだけ指定サイズのフォントになります。[rollover-tabs ...]に指定すると、個別にも指定されているタブ以外のすべてのタブが指定サイズのフォントになります。
+
 label: タブに表示されるキャプションです。省略できません。
 
 注意: margin属性の初期値が"-26px"から"0"に変更されました。marginを指定している方は、表示を維持するのに値を変更する必要があります。
@@ -63,6 +65,7 @@ label: タブに表示されるキャプションです。省略できません�
 * [rollover-tab ...]と[/rollover-tab]の間で別なショートコード（もしかしたら[rollover-tabs]も？）が使えるようになりました。
 * タブの位置を左からの距離または右からの距離で指定できるようになりました。
 * スクロールバーの表示をオン・オフできるようになりました。
+* フォントサイズを指定できるようになりました。
 
 
 == インストール ==
@@ -139,6 +142,9 @@ http://sabaoh.sakura.ne.jp/wordpress/を御覧ください。
 
 
 == 変更履歴 ==
+= 1.2.1 =
+* フォントサイズを指定できるようになりました。
+* ボーダーの色と太さの指定を、phpコードからcssに移動しました。
 = 1.2.0 =
 * スタイルシートが改善され、上ボーダーがグラフィックと一致するようになりました。テーマに依らず位置が決まるようになりました。
 * [rollover-tab ...]と[/rollover-tab]の間で別なショートコード（もしかしたら[rollover-tabs]も？）が使えるようになりました。

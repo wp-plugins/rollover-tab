@@ -1,7 +1,10 @@
 @media screen {
-	[id$="tabbox"],
+	[id$="tabbox"] {
+		overflow:hidden;
+	}
 	[id$="tabpanels"] {
 		overflow:hidden;
+		border:none thin #a0a0a0;
 	}
 	[id$="tabbox"] > header {
 		width:100%;

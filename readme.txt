@@ -2,7 +2,7 @@
 Tags: tab, shortcode, graphical, style, css, javascript, js
 Requires at least: 3.1
 Tested up to: 3.3.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -24,10 +24,10 @@ Please visit my sample at http://sabaoh.sakura.ne.jp/wordpress/?page_id=106
 = Usage: =
 
 <pre>
-[rollover-tabs name="id" norollover="true" border="true" margin="-2px" height="1.5in" left="1px" right="1px" scroll="true"][rollover-tab name="tab1" label="sample1"]
+[rollover-tabs name="id" norollover="true" border="true" margin="-2px" height="1.5in" left="1px" right="1px" scroll="true" font="small"][rollover-tab name="tab1" label="sample1"]
 content of tab1...
 ...
-[/rollover-tab][rollover-tab name="tab2" label="sample2"]
+[/rollover-tab][rollover-tab name="tab2" label="sample2" font="large"]
 content of tab2...
 ...
 [/rollover-tab][/rollover-tabs]
@@ -59,6 +59,9 @@ optional. Default value is false. If you wanted to make tabs align right, you co
 scroll:
 optional boolean. As default panel has no scroll bar. If scroll attribute was set "true", panel will have scroll bar.
 
+font:
+optional. You can assign font-size in tabs, for example "10pt" or "small". If it was used with [rollover-tab ...], size would be assigned for just ONE tab. With [rollover-tabs ...], size would be applied all of tabs, except [rollover-tab ...] with font attribute assigned.
+
 label:
 caption of tabs, required.
 
@@ -79,6 +82,7 @@ NOTICE: with rich text editor, you must NOT insert any line breaks between [roll
 * You can use some other shortcodes between [rollover-tab...] and [/rollover-tab], since 1.2.0.
 * You can assign position of tabs left or right, since 1.2.0.
 * You can choose the scroll bar on or off. Since 1.2.0.
+* You can assign font size for tabs. Since 1.2.1.
 
 == Installation ==
 
@@ -154,6 +158,9 @@ If you need information in English, please contact to age.yamada@kxa.biglobe.ne.
 
 
 == Changelog ==
+= 1.2.1 =
+* Font attribute was added.
+* border color and thickness moved from php to css.
 = 1.2.0 =
 * Theme proof positioning was innovated. So "margin" attribute's default value changed from "-26px" in php to "0" in css.
 * Nested shortcode will proceed between [rollover-tab ...] and [/rollover-tab].
