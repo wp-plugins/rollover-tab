@@ -2,7 +2,7 @@
 Tags: タブ, ショートコード, グラフィカル, スタイルシート, css, javascript, js
 Requires at least: 3.1
 Tested up to: 4.2.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -142,6 +142,8 @@ http://sabaoh.sakura.ne.jp/wordpress/を御覧ください。
 
 
 == 変更履歴 ==
+= 1.3.2 =
+* wptexturizeフィルターを無効にしなくても正常に動作するように改善しました。
 = 1.3.1 =
 * このプラグインが正常に動作しなくなるため、wptexturizeフィルターを無効にするようにしました。
 = 1.2.1 =

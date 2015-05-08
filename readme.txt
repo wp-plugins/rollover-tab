@@ -2,7 +2,7 @@
 Tags: tab, shortcode, graphical, style, css, javascript, js
 Requires at least: 3.1
 Tested up to: 4.2.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 Contributors: Eiji 'Sabaoh' Yamada
 License: GPLv2
 
@@ -158,8 +158,10 @@ If you need information in English, please contact to age.yamada@kxa.biglobe.ne.
 
 
 == Changelog ==
+= 1.3.2 =
+* This plugin became running correctly without removing the wptexturize filter.
 = 1.3.1 =
-*Became removing the wptexturize filter, due to conflict with this plugin.
+* Became removing the wptexturize filter, due to conflict with this plugin.
 = 1.2.1 =
 * Font attribute was added.
 * border color and thickness moved from php to css.
